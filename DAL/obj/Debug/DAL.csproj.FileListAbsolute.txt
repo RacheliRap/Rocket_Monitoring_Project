@@ -1,0 +1,12 @@
+C:\Users\Racheli\Documents\windows-system-project-mvvm-master\DAL\bin\Debug\DAL.dll.config
+C:\Users\Racheli\Documents\windows-system-project-mvvm-master\DAL\bin\Debug\DAL.dll
+C:\Users\Racheli\Documents\windows-system-project-mvvm-master\DAL\bin\Debug\DAL.pdb
+C:\Users\Racheli\Documents\windows-system-project-mvvm-master\DAL\bin\Debug\BE.dll
+C:\Users\Racheli\Documents\windows-system-project-mvvm-master\DAL\bin\Debug\EntityFramework.dll
+C:\Users\Racheli\Documents\windows-system-project-mvvm-master\DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Racheli\Documents\windows-system-project-mvvm-master\DAL\bin\Debug\BE.pdb
+C:\Users\Racheli\Documents\windows-system-project-mvvm-master\DAL\bin\Debug\EntityFramework.xml
+C:\Users\Racheli\Documents\windows-system-project-mvvm-master\DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Racheli\Documents\windows-system-project-mvvm-master\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\Racheli\Documents\windows-system-project-mvvm-master\DAL\obj\Debug\DAL.dll
+C:\Users\Racheli\Documents\windows-system-project-mvvm-master\DAL\obj\Debug\DAL.pdb
