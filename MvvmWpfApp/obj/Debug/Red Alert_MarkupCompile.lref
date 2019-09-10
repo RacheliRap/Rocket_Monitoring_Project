@@ -1,11 +1,15 @@
-﻿C:\Users\Racheli\Documents\windows-system-project-mvvm-master\MvvmWpfApp\obj\Debug\GeneratedInternalTypeHelper.g.cs
+﻿
 FC:\Users\Racheli\Documents\windows-system-project-mvvm-master\MvvmWpfApp\App.xaml;;
 FC:\Users\Racheli\Documents\windows-system-project-mvvm-master\MvvmWpfApp\Controls\ActionButton.xaml;;
+FC:\Users\Racheli\Documents\windows-system-project-mvvm-master\MvvmWpfApp\Views\ChartView.xaml;;
+FC:\Users\Racheli\Documents\windows-system-project-mvvm-master\MvvmWpfApp\Views\EvaluateView.xaml;;
 FC:\Users\Racheli\Documents\windows-system-project-mvvm-master\MvvmWpfApp\Views\GeoLocationAutoComplete.xaml;;
 FC:\Users\Racheli\Documents\windows-system-project-mvvm-master\MvvmWpfApp\Views\ChooseExplosionsView.xaml;;
 FC:\Users\Racheli\Documents\windows-system-project-mvvm-master\MvvmWpfApp\Views\GraphView.xaml;;
+FC:\Users\Racheli\Documents\windows-system-project-mvvm-master\MvvmWpfApp\Views\Main.xaml;;
 FC:\Users\Racheli\Documents\windows-system-project-mvvm-master\MvvmWpfApp\Views\MapView.xaml;;
 FC:\Users\Racheli\Documents\windows-system-project-mvvm-master\MvvmWpfApp\Views\About.xaml;;
 FC:\Users\Racheli\Documents\windows-system-project-mvvm-master\MvvmWpfApp\Views\MainWindow.xaml;;
 FC:\Users\Racheli\Documents\windows-system-project-mvvm-master\MvvmWpfApp\Views\NewReportFormView.xaml;;
+FC:\Users\Racheli\Documents\windows-system-project-mvvm-master\MvvmWpfApp\Views\UploadPhotoView.xaml;;
 

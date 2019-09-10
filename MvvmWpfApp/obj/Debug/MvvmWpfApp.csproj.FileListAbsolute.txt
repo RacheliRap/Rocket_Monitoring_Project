@@ -81,3 +81,22 @@ C:\Users\Racheli\Documents\windows-system-project-mvvm-master\MvvmWpfApp\obj\Deb
 C:\Users\Racheli\Documents\windows-system-project-mvvm-master\MvvmWpfApp\obj\Debug\Red Alert.g.resources
 C:\Users\Racheli\Documents\windows-system-project-mvvm-master\MvvmWpfApp\obj\Debug\Red Alert.exe
 C:\Users\Racheli\Documents\windows-system-project-mvvm-master\MvvmWpfApp\obj\Debug\Red Alert.pdb
+C:\Users\Racheli\Documents\windows-system-project-mvvm-master\MvvmWpfApp\obj\Debug\Views\ChartView.g.cs
+C:\Users\Racheli\Documents\windows-system-project-mvvm-master\MvvmWpfApp\obj\Debug\Views\EvaluateView.g.cs
+C:\Users\Racheli\Documents\windows-system-project-mvvm-master\MvvmWpfApp\obj\Debug\Views\Main.g.cs
+C:\Users\Racheli\Documents\windows-system-project-mvvm-master\MvvmWpfApp\obj\Debug\Views\UploadPhotoView.g.cs
+C:\Users\Racheli\Documents\windows-system-project-mvvm-master\MvvmWpfApp\bin\Debug\ExifLib.dll
+C:\Users\Racheli\Documents\windows-system-project-mvvm-master\MvvmWpfApp\bin\Debug\LiveCharts.dll
+C:\Users\Racheli\Documents\windows-system-project-mvvm-master\MvvmWpfApp\bin\Debug\LiveCharts.Wpf.dll
+C:\Users\Racheli\Documents\windows-system-project-mvvm-master\MvvmWpfApp\bin\Debug\MetadataExtractor.dll
+C:\Users\Racheli\Documents\windows-system-project-mvvm-master\MvvmWpfApp\bin\Debug\XmpCore.dll
+C:\Users\Racheli\Documents\windows-system-project-mvvm-master\MvvmWpfApp\bin\Debug\LiveCharts.pdb
+C:\Users\Racheli\Documents\windows-system-project-mvvm-master\MvvmWpfApp\bin\Debug\LiveCharts.xml
+C:\Users\Racheli\Documents\windows-system-project-mvvm-master\MvvmWpfApp\bin\Debug\LiveCharts.Wpf.pdb
+C:\Users\Racheli\Documents\windows-system-project-mvvm-master\MvvmWpfApp\bin\Debug\LiveCharts.Wpf.xml
+C:\Users\Racheli\Documents\windows-system-project-mvvm-master\MvvmWpfApp\bin\Debug\MetadataExtractor.xml
+C:\Users\Racheli\Documents\windows-system-project-mvvm-master\MvvmWpfApp\bin\Debug\XmpCore.xml
+C:\Users\Racheli\Documents\windows-system-project-mvvm-master\MvvmWpfApp\obj\Debug\Views\ChartView.baml
+C:\Users\Racheli\Documents\windows-system-project-mvvm-master\MvvmWpfApp\obj\Debug\Views\EvaluateView.baml
+C:\Users\Racheli\Documents\windows-system-project-mvvm-master\MvvmWpfApp\obj\Debug\Views\Main.baml
+C:\Users\Racheli\Documents\windows-system-project-mvvm-master\MvvmWpfApp\obj\Debug\Views\UploadPhotoView.baml

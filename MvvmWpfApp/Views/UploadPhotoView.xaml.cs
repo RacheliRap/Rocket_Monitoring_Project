@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -72,8 +73,8 @@ namespace MvvmWpfApp.Views
             {
                 using (var reader = new ExifLib.ExifReader("C:/Users/Racheli/Documents/final/windows-system-project-mvvm-master/MvvmWpfApp/Views/explosion1.jpg"))
                 {
-                    model.Lat = reader.GetLatitude();
-                    model.Lon = reader.GetLongitude();
+                    ///model.Lat = reader.GetLatitude();
+                    //model.Lon = reader.GetLongitude();
                 }
             }
             catch (ExifLibException exifex)
@@ -83,6 +84,5 @@ namespace MvvmWpfApp.Views
 
             return model;
         }
-    
-}
+    }
 }

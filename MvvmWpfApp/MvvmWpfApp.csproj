@@ -154,6 +154,7 @@
       <DependentUpon>ActionButton.xaml</DependentUpon>
     </Compile>
     <Compile Include="Models\GeoLocationAutoCompleteModel.cs" />
+    <Compile Include="Models\PhotoCoordinatesModel.cs" />
     <Compile Include="types\LocationFromJson.cs" />
     <Compile Include="ViewModels\GeoLocationAutoCompleteVM.cs" />
     <Compile Include="Views\ChartView.xaml.cs">

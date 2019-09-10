@@ -94,5 +94,15 @@ namespace MvvmWpfApp.Views
             (DataContext as NewReportFormVM).Report.Latitude = ((Result) e.AddedItems[0])?.Position?[0]??0;
             (DataContext as NewReportFormVM).Report.Longitude = ((Result) e.AddedItems[0])?.Position?[1]??0;
         }
+
+        private void ActionButton_Loaded(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ActionButton_Loaded_1(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

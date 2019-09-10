@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:MvvmWpfApp.Views"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-        Title="main" Height="600" Width="1080" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None" Foreground="White">
+        Title="main" Height="600" Width="900" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None" Foreground="White">
 
     <Window.Resources>
         <Storyboard x:Key="OpenMenu">
@@ -32,7 +32,7 @@
     </Window.Triggers>
     <Grid Background="#FFDEDEDE">
         <Grid x:Name="GridMain" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="540" Width="1010"/>
-        <Grid Height="60" VerticalAlignment="Top" Background="#FF5C99D6">
+        <Grid Height="60" VerticalAlignment="Top" Background="#356859">
             <Grid.Effect>
                 <DropShadowEffect BlurRadius="1" ShadowDepth="1" Color="#FFACACAC"/>
             </Grid.Effect>
@@ -50,7 +50,7 @@
             </StackPanel>
             <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22">Detecting Rocket Hits</TextBlock>
         </Grid>
-        <Grid x:Name="GridMenu" Width="70" HorizontalAlignment="Left" Background="#FF31577E">
+        <Grid x:Name="GridMenu" Width="70" HorizontalAlignment="Left" Background="#37966F">
             <Grid.Effect>
                 <DropShadowEffect BlurRadius="2" ShadowDepth="1" Color="#FFAEAEAE"/>
             </Grid.Effect>
@@ -74,33 +74,33 @@
                     <Image Height="80" VerticalAlignment="Bottom"/>
                 </Grid>
                 <ListView x:Name="ListViewMenu" Background="#FF5C99D6" ScrollViewer.HorizontalScrollBarVisibility="Disabled" SelectionChanged="ListViewMenu_SelectionChanged">
-                    <ListViewItem x:Name="ItemHome" Height="60" Background="#FF31577E">
-                        <StackPanel Orientation="Horizontal">
-                            <materialDesign:PackIcon Kind="ViewDashboard" Height="25" Width="25" Margin="17" Foreground="#FF5C99D6"/>
-                            <TextBlock Text="Home" VerticalAlignment="Center" Margin="20 10" Foreground="#FF5C99D6"/>
+                    <ListViewItem x:Name="ItemHome" Height="70" Background="#37966F">
+                        <StackPanel Orientation="Horizontal" Height="50">
+                            <materialDesign:PackIcon Kind="ViewDashboard" Height="23" Width="23" Margin="17,17,17,0" Foreground="#B9E4C9" VerticalAlignment="Top"/>
+                            <TextBlock Text="Home" VerticalAlignment="Center" Margin="20 10" Foreground="#B9E4C9"/>
                         </StackPanel>
                     </ListViewItem>
-                    <ListViewItem x:Name="ItemReport" Height="60" Selected="ItemCreate_Selected" Background="#FF31577E">
+                    <ListViewItem x:Name="ItemReport" Height="70" Selected="ItemCreate_Selected" Background="#37966F">
                         <StackPanel Orientation="Horizontal">
-                            <materialDesign:PackIcon Kind="Pencil" Height="25" Width="25" Margin="17" Foreground="#FF5C99D6"/>
-                            <TextBlock Text="Report" VerticalAlignment="Center" Margin="20 10" Foreground="#FF5C99D6"/>
+                            <materialDesign:PackIcon Kind="Pencil" Height="20" Width="20" Margin="17" Foreground="#B9E4C9"/>
+                            <TextBlock Text="Report" VerticalAlignment="Center" Margin="20 10" Foreground="#B9E4C9"/>
                         </StackPanel>
                     </ListViewItem>
-                    <ListViewItem x:Name="ItemAnalysis" Height="60" Background="#FF31577E">
+                    <ListViewItem x:Name="ItemAnalysis" Height="70" Background="#37966F">
                         <StackPanel Orientation="Horizontal">
-                            <materialDesign:PackIcon Kind="InsertChart" Height="25" Width="25" Margin="17" Foreground="#FF5C99D6"/>
-                            <TextBlock Text="Analysis" VerticalAlignment="Center" Margin="20 10" Foreground="#FF5C99D6"/>
+                            <materialDesign:PackIcon Kind="InsertChart" Height="23" Width="25" Margin="17" Foreground="#B9E4C9"/>
+                            <TextBlock Text="Analysis" VerticalAlignment="Center" Margin="20 10" Foreground="#B9E4C9"/>
                         </StackPanel>
                     </ListViewItem>
-                    <ListViewItem x:Name="ItemUpdate" Height="60" Background="#FF31577E">
+                    <ListViewItem x:Name="ItemUpdate" Height="70" Background="#37966F">
                         <StackPanel Orientation="Horizontal">
-                            <materialDesign:PackIcon Kind="Update" Height="25" Width="25" Margin="17"  Foreground="#FF5C99D6"/>
-                            <TextBlock Text="Update" VerticalAlignment="Center"  Margin="20 10" Foreground="#FF5C99D6"/>
+                            <materialDesign:PackIcon Kind="Update" Height="23" Width="25" Margin="17"  Foreground="#B9E4C9"/>
+                            <TextBlock Text="Update" VerticalAlignment="Center"  Margin="20 10" Foreground="#B9E4C9"/>
                         </StackPanel>
                     </ListViewItem>
-                    <ListViewItem x:Name="ItemEvaluate" Height="60" Background="#FF31577E">
+                    <ListViewItem x:Name="ItemEvaluate" Height="70" Background="#37966F">
                         <StackPanel Orientation="Horizontal">
-                            <materialDesign:PackIcon  Kind="DoneAll" Height="25" Width="25" Margin="17"  Foreground="#FF5C99D6"/>
+                            <materialDesign:PackIcon  Kind="DoneAll" Height="23" Width="25" Margin="17"  Foreground="#B9E4C9"/>
                             <TextBlock Text="Evaluate" VerticalAlignment="Center"  Margin="20 10" Foreground="#FF5C99D6"/>
                         </StackPanel>
                     </ListViewItem>
