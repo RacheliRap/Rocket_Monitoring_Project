@@ -9,3 +9,14 @@ C:\Users\Racheli\Documents\windows-system-project-mvvm-master\BL\bin\Debug\Entit
 C:\Users\Racheli\Documents\windows-system-project-mvvm-master\BL\obj\Debug\BL.csprojResolveAssemblyReference.cache
 C:\Users\Racheli\Documents\windows-system-project-mvvm-master\BL\obj\Debug\BL.dll
 C:\Users\Racheli\Documents\windows-system-project-mvvm-master\BL\obj\Debug\BL.pdb
+C:\Users\shirliya1\Rocket_Monitoring_Project\BL\bin\Debug\BL.dll
+C:\Users\shirliya1\Rocket_Monitoring_Project\BL\bin\Debug\BL.pdb
+C:\Users\shirliya1\Rocket_Monitoring_Project\BL\bin\Debug\BE.dll
+C:\Users\shirliya1\Rocket_Monitoring_Project\BL\bin\Debug\DAL.dll
+C:\Users\shirliya1\Rocket_Monitoring_Project\BL\bin\Debug\EntityFramework.dll
+C:\Users\shirliya1\Rocket_Monitoring_Project\BL\bin\Debug\BE.pdb
+C:\Users\shirliya1\Rocket_Monitoring_Project\BL\bin\Debug\DAL.pdb
+C:\Users\shirliya1\Rocket_Monitoring_Project\BL\bin\Debug\EntityFramework.xml
+C:\Users\shirliya1\Rocket_Monitoring_Project\BL\obj\Debug\BL.csprojResolveAssemblyReference.cache
+C:\Users\shirliya1\Rocket_Monitoring_Project\BL\obj\Debug\BL.dll
+C:\Users\shirliya1\Rocket_Monitoring_Project\BL\obj\Debug\BL.pdb

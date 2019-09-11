@@ -30,6 +30,7 @@ namespace MvvmWpfApp
         public MapView()
         {
             InitializeComponent();
+            DataContext = this;
             BingMap.Height = SystemParameters.PrimaryScreenHeight * 0.80;
             BingMap.Width = SystemParameters.PrimaryScreenWidth * 0.70;
         }
@@ -51,6 +52,11 @@ namespace MvvmWpfApp
         private void PropertyChanged(object sender, PropertyChangedEventArgs e)
         {
             Dispatcher.Invoke(() => DataContext = MapVm);
+        }
+
+        private void BingMap_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+
         }
     }
 }

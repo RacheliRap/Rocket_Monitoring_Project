@@ -9,23 +9,24 @@
              xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
              xmlns:viewModels="clr-namespace:MvvmWpfApp.ViewModels"
              mc:Ignorable="d" 
-             d:DesignHeight="1000" d:DesignWidth="1200" d:DataContext="{d:DesignInstance viewModels:MapVM}">
+             d:DesignHeight="600" d:DesignWidth="816" d:DataContext="{d:DesignInstance viewModels:MapVM}">
     <materialDesign:TransitioningContent OpeningEffect="{materialDesign:TransitionEffect SlideInFromRight}">
-        <materialDesign:Card  Margin="10" Padding="2">
+        <materialDesign:Card Margin="1" Padding="2">
             <Grid>
                 <Grid.RowDefinitions>
-                    <RowDefinition/>
-                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
                 <xctk:CheckComboBox 
                     x:Name="EventsCheckCB" 
-                    materialDesign:HintAssist.Hint="Select Events To Display Reports On The Map" 
+                    materialDesign:HintAssist.Hint="Select Events To Display On The Map" 
                     ItemsSource="{Binding Events}"
                     SelectedItemsOverride="{Binding SelectedEvents}"
                     Command="{Binding SelectedEventsComand}" 
-                    Grid.Row="0"/>
+                    Grid.Row="0"
+                    Width="790" Height="50" Margin="0,10,0,10"  />
                 <m:Map x:Name="BingMap" Grid.Row="1" CredentialsProvider="AgK_gAfXEpEf0Fp0EZj3Wh8n3U6lR954Mfo6Gh_tVz2TebjjwhNkYf1I0V4CEJwk"
-                           Center="31.7962419,35.3154441" ZoomLevel="7.5" >
+                           Center="31.7962419,35.3154441" ZoomLevel="9.5" MouseDoubleClick="BingMap_MouseDoubleClick">
                     <m:MapItemsControl x:Name="MapItems" ItemsSource="{Binding LocationList}">
                         <m:MapItemsControl.ItemTemplate>
                             <DataTemplate>

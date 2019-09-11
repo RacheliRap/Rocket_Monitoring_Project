@@ -30,7 +30,7 @@ namespace MvvmWpfApp.Views
             myPieChart.Series.Add(new PieSeries { Title = "GOOD", StrokeThickness = 0, Values = new ChartValues<double> { 60.0 } });
             DataContext = this;
             slider.Value = 100;
-
+            Title.Foreground = Brushes.Black;
         }
 
 
