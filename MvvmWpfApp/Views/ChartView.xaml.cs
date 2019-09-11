@@ -29,10 +29,10 @@ namespace MvvmWpfApp.Views
         public ChartView()
         {
             InitializeComponent();
-            //pie chart
-            myPieChart.Series.Add(new PieSeries { Title = "BAD", StrokeThickness = 0, Values = new ChartValues<double> { 10.0 } });
-            myPieChart.Series.Add(new PieSeries { Title = "GOOD", StrokeThickness = 0, Values = new ChartValues<double> { 90.0 } });
             DataContext = this;
+            var converter = new System.Windows.Media.BrushConverter();
+            var brush = (Brush)converter.ConvertFromString("#FD5523");
+            var brush1 = (Brush)converter.ConvertFromString("#37966F");
 
             // bar chart
             SeriesCollection = new SeriesCollection
@@ -40,6 +40,7 @@ namespace MvvmWpfApp.Views
                 new ColumnSeries
                 {
                     Title = "Report",
+                    Fill = brush,
                     Values = new ChartValues<double> { 10, 50, 39, 50, 32, 31, 41, 21, 21, 34, 1,15 }
                 }
             };
@@ -48,6 +49,7 @@ namespace MvvmWpfApp.Views
             SeriesCollection.Add(new ColumnSeries
             {
                 Title = "Events",
+                Fill = brush1,
                 Values = new ChartValues<double> { 11, 56, 42, 12, 56, 22, 18, 34, 36, 12, 19 }
             });
 
@@ -81,8 +83,8 @@ namespace MvvmWpfApp.Views
 
         internal void RefreshData(double badPct)
         {
-            myPieChart.Series[0].Values[0] = badPct;
-            myPieChart.Series[1].Values[0] = 100.0 - badPct;
+           // myPieChart.Series[0].Values[0] = badPct;
+            //myPieChart.Series[1].Values[0] = 100.0 - badPct;
         }
 
 

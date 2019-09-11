@@ -7,7 +7,7 @@
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
-    <Grid d:DataContext="{d:DesignInstance Type=local:ActionButton}">
+    <Grid d:DataContext="{d:DesignInstance Type=local:ActionButton}" >
         <StackPanel>
             <StackPanel.Style>
                 <Style>
@@ -36,10 +36,10 @@
                     </Style.Triggers>
                 </Style>
             </StackPanel.Style>
-            <Button x:Name="FlatButton" Margin="10" Style="{Binding Style}" Click="Button_Click"
+            <Button x:Name="FlatButton" Background="#FD5523" Margin="10" Style="{Binding Style}" Click="Button_Click"
                     Command="{Binding Command}" CommandParameter="{Binding CommandParameter}">
                 <StackPanel Orientation="Horizontal">
-                    <materialDesign:PackIcon VerticalAlignment="Center" HorizontalAlignment="Left" Kind="{Binding Icon}"/>
+                    <materialDesign:PackIcon VerticalAlignment="Center" Foreground="White" HorizontalAlignment="Left" Kind="{Binding Icon}"/>
                     <Label Content="{Binding Text}" Foreground="{StaticResource PrimaryHueMidBrush}"/>
                 </StackPanel>
             </Button>

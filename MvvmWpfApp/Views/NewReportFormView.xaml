@@ -82,10 +82,11 @@
                         Margin="130,12"
                         State="origin"
                         Icon="ContentSave"
+                        Background="White"
                         Style="{StaticResource MaterialDesignRaisedButton}" Width="230" />
                     <Controls:ActionButton
                         DockPanel.Dock="Right" Margin="2,12" HorizontalAlignment="Right" ButtonClick="ResetForm"
-                        Text="CANCEL" State="flat" Icon="Cancel" Style="{StaticResource MaterialDesignFlatButton}" Width="230" />
+                        Text="CANCEL" State="flat" Icon="Cancel" Style="{StaticResource MaterialDesignFlatButton}" Width="230" Foreground="White"/>
                 </DockPanel>
             </StackPanel>
         </materialDesign:Card>

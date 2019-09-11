@@ -30,9 +30,27 @@
             <BeginStoryboard Storyboard="{StaticResource CloseMenu}"/>
         </EventTrigger>
     </Window.Triggers>
-    <Grid Background="#FFDEDEDE">
+    <Grid Background="White">
         <Grid x:Name="GridMain" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="540" Width="1010"/>
         <Grid Height="60" VerticalAlignment="Top" Background="#356859">
+            <Grid.Effect>
+                <DropShadowEffect BlurRadius="1" ShadowDepth="1" Color="#FFACACAC"/>
+            </Grid.Effect>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                <TextBlock Text="Abel Dutra" VerticalAlignment="Center" FontSize="16"/>
+                <materialDesign:PopupBox PlacementMode="BottomAndAlignRightEdges" StaysOpen="False" Margin="10">
+                    <StackPanel Width="150">
+                        <Button Content="Settings"/>
+                        <Button Content="Account"/>
+                        <Button Content="Help"/>
+                        <Separator/>
+                        <Button Content="Logout"/>
+                    </StackPanel>
+                </materialDesign:PopupBox>
+            </StackPanel>
+            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22">Detecting Rocket Hits</TextBlock>
+        </Grid>
+           <Grid Height="60" VerticalAlignment="Top" Background="#356859">
             <Grid.Effect>
                 <DropShadowEffect BlurRadius="1" ShadowDepth="1" Color="#FFACACAC"/>
             </Grid.Effect>
@@ -101,7 +119,7 @@
                     <ListViewItem x:Name="ItemEvaluate" Height="70" Background="#37966F">
                         <StackPanel Orientation="Horizontal">
                             <materialDesign:PackIcon  Kind="DoneAll" Height="23" Width="25" Margin="17"  Foreground="#B9E4C9"/>
-                            <TextBlock Text="Evaluate" VerticalAlignment="Center"  Margin="20 10" Foreground="#FF5C99D6"/>
+                            <TextBlock Text="Evaluate" VerticalAlignment="Center"  Margin="20 10" Foreground="#B9E4C9"/>
                         </StackPanel>
                     </ListViewItem>
                 </ListView>

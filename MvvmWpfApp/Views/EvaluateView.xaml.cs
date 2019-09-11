@@ -26,8 +26,11 @@ namespace MvvmWpfApp.Views
         public EvaluateView()
         {
             InitializeComponent();
-            myPieChart.Series.Add(new PieSeries { Title = "BAD", StrokeThickness = 0, Values = new ChartValues<double> { 40.0 } });
-            myPieChart.Series.Add(new PieSeries { Title = "GOOD", StrokeThickness = 0, Values = new ChartValues<double> { 60.0 } });
+            var converter = new System.Windows.Media.BrushConverter();
+            var brush = (Brush)converter.ConvertFromString("#FD5523");
+            var brush1 = (Brush)converter.ConvertFromString("#37966F");
+            myPieChart.Series.Add(new PieSeries { Title = "BAD", Fill = brush, StrokeThickness = 0, Values = new ChartValues<double> { 40.0 } });
+            myPieChart.Series.Add(new PieSeries { Title = "GOOD", Fill = brush1, StrokeThickness = 0, Values = new ChartValues<double> { 60.0 } });
             DataContext = this;
             slider.Value = 100;
 
