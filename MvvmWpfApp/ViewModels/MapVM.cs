@@ -58,6 +58,7 @@ namespace MvvmWpfApp.ViewModels
         public MapVM()
         {
             MapModel = new MapModel();
+            //Events = new ObservableCollection<BE.Event> { new Event { Id = 1 }, new Event { Id = 2 }, new Event { Id = 3 } };
             MapModel.PropertyChanged += (sender, args) =>
             {
                 OnPropertyChanged(nameof(Events));
@@ -81,12 +82,12 @@ namespace MvvmWpfApp.ViewModels
         }
 
 
-        private void SelectedChanged(object obj)
+        private async void SelectedChanged(object obj)
         {
             if (obj is Event)
             {
                 Event @event = obj as Event;
-                SelectedChangedAsync(@event);
+                await SelectedChangedAsync(@event);
             }
         }
 

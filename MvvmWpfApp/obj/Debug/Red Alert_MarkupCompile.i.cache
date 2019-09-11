@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Racheli\Documents\windows-system-project-mvvm-master\MvvmWpfApp\obj\Debug\
+C:\Users\shirliya1\Rocket_Monitoring_Project\MvvmWpfApp\obj\Debug\
 MvvmWpfApp
 none
 false
 DEBUG;TRACE
-C:\Users\Racheli\Documents\windows-system-project-mvvm-master\MvvmWpfApp\App.xaml
+C:\Users\shirliya1\Rocket_Monitoring_Project\MvvmWpfApp\App.xaml
 12-1669444658
 
-36-750329859
-981755442479
+36185108851
+98-1355017852
 Controls\ActionButton.xaml;Views\ChartView.xaml;Views\EvaluateView.xaml;Views\GeoLocationAutoComplete.xaml;Views\ChooseExplosionsView.xaml;Views\GraphView.xaml;Views\Main.xaml;Views\MapView.xaml;Views\About.xaml;Views\MainWindow.xaml;Views\NewReportFormView.xaml;Views\UploadPhotoView.xaml;
 
-False
+True
 

@@ -6,16 +6,16 @@
              xmlns:local="clr-namespace:MvvmWpfApp.Views"
              mc:Ignorable="d" 
              xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
-             d:DesignHeight="300" d:DesignWidth="500">
+             d:DesignHeight="505" d:DesignWidth="816">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="113*"/>
-            <RowDefinition Height="37*"/>
+            <RowDefinition Height="110*"/>
+            <RowDefinition Height="30*"/>
         </Grid.RowDefinitions>
-        <TextBox Text="Evaluation of Kmeans for predicting place of fallen missiles" Margin="85,10,89,214" TextChanged="TextBox_TextChanged"/>
+        <TextBox Name="Title" Text="Evaluation of Kmeans for predicting places of fallen missiles" Margin="85,10,89,300" TextChanged="TextBox_TextChanged" FontWeight="Bold" CaretBrush="#FF2196F3" BorderBrush="#89000000"/>
 
-        <lvc:PieChart x:Name="myPieChart" LegendLocation="Bottom" DataClick="Chart_OnDataClick" Hoverable="False" DataTooltip="{x:Null}" Margin="121,84,122,10"/>
-        <Slider x:Name="slider" Maximum="5000" ValueChanged="Slider_ValueChanged" Margin="161,10,161,31" Grid.Row="1" />
+        <lvc:PieChart x:Name="myPieChart" LegendLocation="Bottom" DataClick="Chart_OnDataClick" Hoverable="False" DataTooltip="{x:Null}" Margin="121,120,121,10"/>
+        <Slider x:Name="slider" Maximum="5000" ValueChanged="Slider_ValueChanged" Margin="100,20,100,20" Grid.Row="1" />
 
     </Grid>
 </UserControl>
