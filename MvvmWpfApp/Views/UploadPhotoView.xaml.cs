@@ -35,7 +35,7 @@ namespace MvvmWpfApp.Views
     /// </summary>
     public partial class UploadPhotoView : UserControl
     {
-        public const string strGooglePlaceAPILey = "AIzaSyBsAIjK9ba8-EYxltrtnBEnp91mw--Muro";
+        public const string strGooglePlaceAPILey = "AIzaSyB----------------------------------Muro";
         public const string strPlacesAutofillUrl = "https://maps.googleapis.com/maps/api/geocode/json?latlng=";
 
         public UploadPhotoView()
