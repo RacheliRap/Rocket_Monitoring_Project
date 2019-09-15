@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27130.2027
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BE", "BE\BE.csproj", "{2A8AE401-581A-4B1B-8ACE-D5ED51C44EB3}"
 EndProject
@@ -10,6 +10,11 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BL", "BL\BL.csproj", "{33E1BB1D-EF8A-4AE6-82CB-AD7F6AEA173D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvvmWpfApp", "MvvmWpfApp\MvvmWpfApp.csproj", "{DCABE72D-C95C-4E73-804A-1B9F8FB244ED}"
+	ProjectSection(ProjectDependencies) = postProject
+		{7C6447B2-D889-4306-AD8B-DA5542054C66} = {7C6447B2-D889-4306-AD8B-DA5542054C66}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoogleDirections", "..\GoogleDirections.csproj", "{7C6447B2-D889-4306-AD8B-DA5542054C66}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +38,10 @@ Global
 		{DCABE72D-C95C-4E73-804A-1B9F8FB244ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DCABE72D-C95C-4E73-804A-1B9F8FB244ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DCABE72D-C95C-4E73-804A-1B9F8FB244ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C6447B2-D889-4306-AD8B-DA5542054C66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C6447B2-D889-4306-AD8B-DA5542054C66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C6447B2-D889-4306-AD8B-DA5542054C66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C6447B2-D889-4306-AD8B-DA5542054C66}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

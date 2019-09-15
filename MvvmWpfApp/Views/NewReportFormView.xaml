@@ -23,9 +23,9 @@
         <quickType:ResultConverter x:Key="ResultConverter" />
     </UserControl.Resources>
     <materialDesign:TransitioningContent OpeningEffect="{materialDesign:TransitionEffect SlideInFromRight}">
-        <materialDesign:Card Margin="70,109,10,0"
+        <materialDesign:Card Margin="20,30,20,0"
                              d:DataContext="{d:DesignInstance Type=viewModels:NewReportFormVM}" Height="308">
-            <StackPanel Orientation="Vertical" Height="628" Width="867">
+            <StackPanel Orientation="Vertical" Height="505" Width="816">
                 <Grid Margin="10" x:Name="Grid1" VerticalAlignment="Center" HorizontalAlignment="Center">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto" />

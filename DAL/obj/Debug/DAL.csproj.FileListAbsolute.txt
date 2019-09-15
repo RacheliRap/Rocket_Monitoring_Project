@@ -1,3 +1,15 @@
+C:\Users\shirliya1\Rocket_Monitoring_Project\DAL\bin\Debug\DAL.dll.config
+C:\Users\shirliya1\Rocket_Monitoring_Project\DAL\bin\Debug\DAL.dll
+C:\Users\shirliya1\Rocket_Monitoring_Project\DAL\bin\Debug\DAL.pdb
+C:\Users\shirliya1\Rocket_Monitoring_Project\DAL\bin\Debug\BE.dll
+C:\Users\shirliya1\Rocket_Monitoring_Project\DAL\bin\Debug\EntityFramework.dll
+C:\Users\shirliya1\Rocket_Monitoring_Project\DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\shirliya1\Rocket_Monitoring_Project\DAL\bin\Debug\BE.pdb
+C:\Users\shirliya1\Rocket_Monitoring_Project\DAL\bin\Debug\EntityFramework.xml
+C:\Users\shirliya1\Rocket_Monitoring_Project\DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\shirliya1\Rocket_Monitoring_Project\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\shirliya1\Rocket_Monitoring_Project\DAL\obj\Debug\DAL.dll
+C:\Users\shirliya1\Rocket_Monitoring_Project\DAL\obj\Debug\DAL.pdb
 C:\Users\Racheli\Documents\windows-system-project-mvvm-master\DAL\bin\Debug\DAL.dll.config
 C:\Users\Racheli\Documents\windows-system-project-mvvm-master\DAL\bin\Debug\DAL.dll
 C:\Users\Racheli\Documents\windows-system-project-mvvm-master\DAL\bin\Debug\DAL.pdb

@@ -12,9 +12,8 @@
             <RowDefinition Height="113*"/>
             <RowDefinition Height="37*"/>
         </Grid.RowDefinitions>
-        <TextBox Text="Evaluation of Kmeans for predicting place of fallen missiles" Margin="121,10,89,394" TextChanged="TextBox_TextChanged" Foreground="Black"/>
-
-        <lvc:PieChart x:Name="myPieChart" LegendLocation="Bottom" DataClick="Chart_OnDataClick" Hoverable="False" DataTooltip="{x:Null}" Margin="220,159,62,0" Foreground="black"/>
+        <TextBox  x:Name="Title"  Text="Evaluation of Kmeans for predicting place of fallen missiles" Margin="121,10,89,394" TextChanged="TextBox_TextChanged" Foreground="Black"/>
+        <lvc:PieChart x:Name="myPieChart" LegendLocation="Bottom" DataClick="Chart_OnDataClick" Hoverable="False" DataTooltip="{x:Null}" Margin="192,113,49,10" Foreground="black"/>
         <Slider x:Name="slider" Maximum="1000" ValueChanged="Slider_ValueChanged" Margin="340,10,182,80" Grid.Row="1" Ticks="0,100,200,300,400,500,600,700,800,900,1000" IsSnapToTickEnabled="True" TickPlacement="BottomRight" >
         <Slider.Resources>
             <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" Color="Black" />

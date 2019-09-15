@@ -33,7 +33,7 @@ namespace MvvmWpfApp.Views
         {
             ButtonCloseMenu.Visibility = Visibility.Collapsed;
             ButtonOpenMenu.Visibility = Visibility.Visible;
-        }
+        } 
 
         private void ListViewMenu_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -43,8 +43,8 @@ namespace MvvmWpfApp.Views
             switch (((ListViewItem)((ListView)sender).SelectedItem).Name)
             {
                 case "ItemHome":
-                    //usc = new UserControlHome();
-                    //GridMain.Children.Add(usc);
+                    usc = new MapView();
+                    GridMain.Children.Add(usc);
                     break;
                 case "ItemReport":
                     usc = new NewReportFormView();

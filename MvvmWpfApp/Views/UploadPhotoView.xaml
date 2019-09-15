@@ -5,15 +5,14 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:MvvmWpfApp.Views"
              mc:Ignorable="d" 
-             d:DesignHeight="600" d:DesignWidth="1080">
+             d:DesignHeight="600" d:DesignWidth="900">
     <Grid>
 
-        <Image Margin="287.667,210,300.667,162" Name="imgPhoto"
-        Stretch="Fill" Grid.Column="1" />
+        <Image Margin="301,233,99,139" Name="imgPhoto" />
         <Button Height="41" HorizontalAlignment="Left"
-        Margin="800,0,0,427" Name="btnLoad" VerticalAlignment="Bottom"
-        Width="82" Click="btnLoad_Click">_Upload</Button>
-        <TextBox x:Name="UriTextBox" Visibility="Visible" Margin="196.667,132,389.667,427" Grid.Column="1" />
-        <Button x:Name="saveReport" Margin="447,485,439,70" Click="saveReport_Click">_Upload Phohto as New Event</Button>
+        Margin="732,0,0,395" Name="btnLoad" VerticalAlignment="Bottom"
+        Width="82" Click="btnLoad_Click">_Browse</Button>
+        <TextBox x:Name="UriTextBox" Visibility="Visible" Margin="377,68,290,395" />
+        <Button x:Name="saveReport" Margin="429,499,211,69" Visibility="Visible" Click="saveReport_Click">_Upload Phohto as New Event</Button>
     </Grid>
 </UserControl>

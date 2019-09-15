@@ -40,7 +40,7 @@
                     Command="{Binding Command}" CommandParameter="{Binding CommandParameter}">
                 <StackPanel Orientation="Horizontal">
                     <materialDesign:PackIcon VerticalAlignment="Center" Foreground="White" HorizontalAlignment="Left" Kind="{Binding Icon}"/>
-                    <Label Content="{Binding Text}" Foreground="{StaticResource PrimaryHueMidBrush}"/>
+                    <Label Content="{Binding Text}" Foreground="White"/>
                 </StackPanel>
             </Button>
         </StackPanel>

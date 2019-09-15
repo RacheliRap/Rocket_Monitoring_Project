@@ -15,9 +15,6 @@ namespace BE
         public double ApproxLongitude { get; set; }
 
 
-
-
-
         public object Clone()
         {
             return new Explosion()
