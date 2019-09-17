@@ -101,7 +101,7 @@ namespace MvvmWpfApp.Views
         {
             GeoLocation location =  ActionResult(UriTextBox.Text);
             double lat = location.Latitude;
-            if (location == null)
+            if (location == null) //can't extract location from photo
             {
                 MessageBox.Show("Make sure to take the photo while your phone location is on."
                     ,"Couldn't Extract coordinates from image!" ,MessageBoxButton.OK, 

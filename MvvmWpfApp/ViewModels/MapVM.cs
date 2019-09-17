@@ -36,11 +36,11 @@ namespace MvvmWpfApp.ViewModels
                 var a = new ObservableCollection<Pushpin>(
                     Reports.Select(r => new Pushpin()
                     {
-                        Location = new Location(r.Latitude, r.Longitude)
+                        Location = new Microsoft.Maps.MapControl.WPF.Location(r.Latitude, r.Longitude)
                     }));
                 var b = new ObservableCollection<Pushpin>(Explosions.Select(e => new Pushpin()
                 {
-                    Location = new Location(e.ApproxLatitude, e.ApproxLongitude),
+                    Location = new Microsoft.Maps.MapControl.WPF.Location(e.ApproxLatitude, e.ApproxLongitude),
                     Background = Brushes.Red 
                 }));
                 var c = a.ToList();

@@ -178,10 +178,12 @@
     <Compile Include="Models\ExifLibExtensions.cs" />
     <Compile Include="Models\Geocoder.cs" />
     <Compile Include="Models\GeoLocationAutoCompleteModel.cs" />
+    <Compile Include="Models\GoogleGeoJsonResult.cs" />
     <Compile Include="Models\GoogleMapsException.cs" />
     <Compile Include="Models\HttpWebService.cs" />
     <Compile Include="Models\LatLng.cs" />
     <Compile Include="Models\Location.cs" />
+    <Compile Include="Models\LocationPredictionClass.cs" />
     <Compile Include="Models\PhotoCoordinatesModel.cs" />
     <Compile Include="Models\Route.cs" />
     <Compile Include="Models\RouteDirections.cs" />

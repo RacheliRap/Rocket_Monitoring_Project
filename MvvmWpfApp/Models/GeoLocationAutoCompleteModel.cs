@@ -5,6 +5,8 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using QuickType;
+using System.Net;
+using Newtonsoft.Json;
 
 namespace MvvmWpfApp.Models
 {
@@ -14,9 +16,44 @@ namespace MvvmWpfApp.Models
         public double Latitude { get; set; }
         public double Longitude { get; set; }
 
-        public async Task<List<Result>> SearchLocation(string query)
+        public const string strGooglePlaceAPILey = "AIzaSyDllS5d3Ot3QQ6YoEOoICyemScrx8AAe1Y";
+        public const string strPlacesAutofillUrl = "https://maps.googleapis.com/maps/api/place/autocomplete/json";
+
+        static async Task<string> CallService(string strURL)
         {
-            var result = new List<Result>();
+            WebClient client = new WebClient();
+            string strResult;
+            try
+            {
+                strResult = await client.DownloadStringTaskAsync(new Uri(strURL));
+            }
+            catch
+            {
+                strResult = "Exception";
+            }
+            finally
+            {
+                client.Dispose();
+                client = null;
+            }
+            return strResult;
+        }
+
+        internal static async Task<LocationPredictionClass> LocationAutoComplete(string strFullURL)
+        {
+            LocationPredictionClass objLocationPredictClass = null;
+            string strResult = await CallService(strFullURL);
+            if (strResult != "Exception")
+            {
+                objLocationPredictClass = JsonConvert.DeserializeObject<LocationPredictionClass>(strResult);
+            }
+            return objLocationPredictClass;
+        }
+
+
+        public async Task<List<Prediction>> SearchLocation(string query)
+        {
+            /*var result = new List<Result>();
             const string appId = "51n1d12kkw6EasbuRYvc";
             const string appCode = "1HhHoOJH2-jUQBfI5bMfQQ";
             const string baseUrl = "https://places.cit.api.here.com/places/v1/autosuggest";
@@ -30,7 +67,21 @@ namespace MvvmWpfApp.Models
                 var res = Welcome.FromJson(jsonString);
                 result.AddRange(res.Results);
             }
-            return result;
+            return result;*/
+            string strFullURL;
+            StringBuilder builderLocationAutoComplete = new StringBuilder(strPlacesAutofillUrl);
+            builderLocationAutoComplete.Append("?input=").Append(query).Append("&key=").Append(strGooglePlaceAPILey);
+            strFullURL = builderLocationAutoComplete.ToString();
+            builderLocationAutoComplete.Clear();
+            builderLocationAutoComplete = null;
+            LocationPredictionClass objLocationPredictClass = null;
+            string strResult = await CallService(strFullURL);
+            if (strResult != "Exception")
+            {
+                objLocationPredictClass = JsonConvert.DeserializeObject<LocationPredictionClass>(strResult);
+            }
+            return objLocationPredictClass.predictions;
+
         }
     }
 }

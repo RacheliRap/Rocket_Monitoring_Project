@@ -15,9 +15,9 @@ namespace MvvmWpfApp.ViewModels
 {
     public class GeoLocationAutoCompleteVM: INotifyPropertyChanged
     {
-        private List<Result> _locationList;
+        private List<Prediction> _locationList;
 
-        public List<Result> LocatioList
+        public List<Prediction> LocationList
         {
             get { return _locationList; }
             set
@@ -43,9 +43,9 @@ namespace MvvmWpfApp.ViewModels
         {
             var addres = autoComplete.Text;
             var autocomplete = new GeoLocationAutoCompleteModel();
-            var resolts = await autocomplete.SearchLocation(addres);
+            var results = await autocomplete.SearchLocation(addres);
             if (addres != autoComplete.Text) return;
-            LocatioList = resolts;
+            LocationList = results;
             autoComplete.DataContext = this;
         }
 
