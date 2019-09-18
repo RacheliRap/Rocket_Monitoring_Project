@@ -74,7 +74,15 @@
                                          Grid.Row="1" Margin="3.333,6,0,6.333" HorizontalAlignment="Left" Grid.Column="1" />
                 </Grid>
                 <Separator Background="Transparent"/>
-                <DockPanel Margin="3,3,46.667,3" x:Name="ActionsPanel">
+                <DockPanel Margin="54,3,-29,3" x:Name="ActionsPanel" RenderTransformOrigin="0.5,0.5">
+                    <DockPanel.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="0.512"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </DockPanel.RenderTransform>
                     <Controls:ActionButton
                         x:Name="SaveButton"
                         DockPanel.Dock="Right"
@@ -82,7 +90,7 @@
                         Margin="130,12"
                         State="origin"
                         Icon="ContentSave"
-                        Background="White"
+
                         Style="{StaticResource MaterialDesignRaisedButton}" Width="230" />
                     <Controls:ActionButton
                         DockPanel.Dock="Right" Margin="2,12" HorizontalAlignment="Right" ButtonClick="ResetForm"

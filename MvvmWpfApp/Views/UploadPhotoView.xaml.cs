@@ -67,7 +67,7 @@ namespace MvvmWpfApp.Views
             //var country = result.Item3;
             //AddressResponse result = await GoogleGeocodingAPI.SearchAddressAsync("100 Market St, Southbank");
             //------------------------------------------------------------------
-           WebClient client = new WebClient();
+            WebClient client = new WebClient();
             string coordinate1 = "32.797821,-96.781720";
             string strFullURL;
             StringBuilder builderLocationAutoComplete = new StringBuilder(strPlacesAutofillUrl);
