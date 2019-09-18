@@ -57,11 +57,11 @@ namespace MvvmWpfApp.Views
 
             }
             //------------------------------------------------------------------------
-           //var geocoder = new Geocoder("AIzaSyBsAIjK9ba8-EYxltrtnBEnp91mw--Muro");
+           //var geocoder = new Geocoder("AIzaSyBsA------------------------Muro");
            //var locations = geocoder.Geocode("Hawks Road, Kingston, UK");
             // var address = geocoder.ReverseGeocode(new LatLng(51.408580, -0.292470));
             //-----------------------------------------------------------------
-            //GoogleGeocodingAPI.GoogleAPIKey = "AIzaSyDllS5d3Ot3QQ6YoEOoICyemScrx8AAe1Y";
+            //GoogleGeocodingAPI.GoogleAPIKey = "AIzaSyDll--------------------------AAe1Y";
             //var result = await GoogleGeocodingAPI.GetCityFromCoordinatesAsync(0.2323, 0.2323);
             //var city = result.Item1;
             //var country = result.Item3;
