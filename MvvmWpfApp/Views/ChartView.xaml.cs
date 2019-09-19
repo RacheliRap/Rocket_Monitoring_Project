@@ -36,21 +36,21 @@ namespace MvvmWpfApp.Views
 
             // bar chart
             SeriesCollection = new SeriesCollection
-            {
+            {   //reports
                 new ColumnSeries
                 {
                     Title = "Report",
                     Fill = brush,
-                    Values = new ChartValues<double> { 10, 50, 39, 50, 32, 31, 41, 21, 21, 34, 1,15 }
+                    Values = new ChartValues<double> { 11, 56, 42, 12, 56, 22, 18, 34, 36, 12, 19 }
                 }
             };
 
             //adding series will update and animate the chart automatically
             SeriesCollection.Add(new ColumnSeries
-            {
+            {   //real hits
                 Title = "Events",
                 Fill = brush1,
-                Values = new ChartValues<double> { 11, 56, 42, 12, 56, 22, 18, 34, 36, 12, 19 }
+                Values = new ChartValues<double> { 10, 50, 39, 10, 32, 26, 30, 20, 21, 34, 1, 15 }
             });
 
             //also adding values updates and animates the chart automatically
