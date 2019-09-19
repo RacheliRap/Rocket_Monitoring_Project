@@ -12,6 +12,6 @@
         Width="82" Click="btnLoad_Click"  Background="#FD5523">_Browse</Button>
         <TextBox x:Name="UriTextBox" Visibility="Visible" Margin="200,68,200,395" />
         <Image Margin="200,180,200,145" Name="imgPhoto" />
-        <Button x:Name="saveReport" Background="#FD5523" Margin="300,400,300,69" Visibility="Visible" Click="saveReport_Click">_Upload Phohto as New Event</Button>
+        <Button x:Name="saveReport" Background="#FD5523" IsEnabled="False" Margin="300,400,300,69" Visibility="Visible" Click="saveReport_Click">_Upload Phohto as New Event</Button>
     </Grid>
 </UserControl>

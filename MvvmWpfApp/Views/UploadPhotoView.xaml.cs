@@ -38,12 +38,59 @@ namespace MvvmWpfApp.Views
     {
         public const string strGooglePlaceAPILey = "AIzaSyCM-F5Ppnoh9Yn4VMYqIPTua7uGeUP2Wyc";
         public const string strPlacesAutofillUrl = "https://maps.googleapis.com/maps/api/geocode/json?latlng=";
+        GeoLocation location;
+        string address;
+
 
         public UploadPhotoView()
         {
             InitializeComponent();
+            saveReport.IsEnabled = false;
         }
-        private async void btnLoad_Click(object sender, RoutedEventArgs e)
+        private void btnLoad_Click(object sender, RoutedEventArgs e)
+        {
+            UploadPhoto(); //open file dialog and upload photo to view
+            saveReport.IsEnabled = true; //if a photo was uploaded, enable the save button
+            location = getCordFromPhoto(UriTextBox.Text); //get the coordinates from the photo
+            if(location != null)
+            {   
+
+                getAddressFromCord(); //return address from coordinates
+            }
+     
+        }
+        // return address from coordinates by google API
+        private async void getAddressFromCord()
+        {
+            string strResult, strFullURL;
+            WebClient client = new WebClient();
+            StringBuilder coordinate = new StringBuilder(location.Latitude.ToString()).Append(",").Append(location.Longitude.ToString());
+            String mCoordinates = coordinate.ToString();
+            StringBuilder builderLocationAutoComplete = new StringBuilder(strPlacesAutofillUrl);
+            builderLocationAutoComplete.Append(coordinate).Append("&key=").Append(strGooglePlaceAPILey);
+            strFullURL = builderLocationAutoComplete.ToString();
+            builderLocationAutoComplete.Clear();
+            builderLocationAutoComplete = null;
+            try
+            {
+                strResult = await client.DownloadStringTaskAsync(new Uri(strFullURL));
+                RootObject results = JsonConvert.DeserializeObject<RootObject>(strResult);
+                address = results.results[0].formatted_address;
+            }
+            catch
+            {
+                strResult = "Exception";
+                address = null;
+            }
+            finally
+            {
+                client.Dispose();
+                client = null;
+            }
+        }
+
+        // open file dialog, allow the user to chooce a photo and upload it to the view
+        private void UploadPhoto()
         {
             OpenFileDialog op = new OpenFileDialog();
             op.Title = "Select a picture";
@@ -55,67 +102,41 @@ namespace MvvmWpfApp.Views
                 UriTextBox.Foreground = System.Windows.Media.Brushes.Black;
                 UriTextBox.Text = new Uri(op.FileName).LocalPath;
                 imgPhoto.Source = new BitmapImage(new Uri(op.FileName));
-
             }
-            //------------------------------------------------------------------------
-           //var geocoder = new Geocoder("AIzaSyBsA------------------------Muro");
-           //var locations = geocoder.Geocode("Hawks Road, Kingston, UK");
-            // var address = geocoder.ReverseGeocode(new LatLng(51.408580, -0.292470));
-            //-----------------------------------------------------------------
-            //GoogleGeocodingAPI.GoogleAPIKey = "AIzaSyDll--------------------------AAe1Y";
-            //var result = await GoogleGeocodingAPI.GetCityFromCoordinatesAsync(0.2323, 0.2323);
-            //var city = result.Item1;
-            //var country = result.Item3;
-            //AddressResponse result = await GoogleGeocodingAPI.SearchAddressAsync("100 Market St, Southbank");
-            //------------------------------------------------------------------
-            WebClient client = new WebClient();
-            string coordinate1 = "32.797821,-96.781720";
-            string strFullURL;
-            StringBuilder builderLocationAutoComplete = new StringBuilder(strPlacesAutofillUrl);
-            builderLocationAutoComplete.Append(coordinate1).Append("&key=").Append(strGooglePlaceAPILey);
-            strFullURL = builderLocationAutoComplete.ToString();
-            builderLocationAutoComplete.Clear();
-            builderLocationAutoComplete = null;
-            string strResult;
-            try
-            {
-                strResult = await client.DownloadStringTaskAsync(new Uri(strFullURL));
-                RootObject results = JsonConvert.DeserializeObject<RootObject>(strResult);
-            }
-            catch
-            {
-                strResult = "Exception";
-            }
-            finally
-            {
-                client.Dispose();
-                client = null;
-            }
-           
-
-
-            //Console.WriteLine("enter coordinate:");
-     
-
         }
 
         private void saveReport_Click(object sender, RoutedEventArgs e)
         {
-            GeoLocation location =  ActionResult(UriTextBox.Text);
-            double lat = location.Latitude;
             if (location == null) //can't extract location from photo
             {
                 MessageBox.Show("Make sure to take the photo while your phone location is on."
                     ,"Couldn't Extract coordinates from image!" ,MessageBoxButton.OK, 
                     MessageBoxImage.Error);
             }
-            StringBuilder showString = new StringBuilder("A new falling event was added at Lat ");
-            showString.Append(location.Latitude).Append(",lat ").Append(location.Longitude);
-            MessageBox.Show(showString.ToString(), "Add Event", MessageBoxButton.OK);
+            else
+            {
+                if(address == null) // The photo had coordinates, but couldnt convert them to address
+                {
+                    /*var lat = location.Latitude;
+                    var lon = location.Longitude;
+                    Hyperlink hyperl = new Hyperlink(new Run("hi"));
+                    hyperl.NavigateUri = new Uri("http://search.msn.com");*/
+                    StringBuilder showString = new StringBuilder("Are you sure you want to add a new falling event at:\n ");
+                    showString.Append("https://www.google.com/maps/place/{lat},{lon}");
+                    MessageBox.Show(showString.ToString(), "Add Event", MessageBoxButton.OK);
+                }
+                else // The photo contained coordinates, and address was extracted
+                {
+                    StringBuilder showString = new StringBuilder("Are you sure you want to add a new falling event at ");
+                    showString.Append(address);
+                    MessageBox.Show(showString.ToString(), "Add Event", MessageBoxButton.OK);
+                }
+            }
+        
         }
 
         //extract coordinates from file 
-        public GeoLocation ActionResult(String photoUri)
+        public GeoLocation getCordFromPhoto(String photoUri)
         {
             var directories = ImageMetadataReader.ReadMetadata(photoUri);
 
