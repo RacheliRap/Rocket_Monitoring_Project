@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:MvvmWpfApp.Views"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-        Title="main" Height="600" Width="900" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None" Foreground="White">
+        Title="Detecting Rocket Hits" Height="600" Width="900" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen" WindowStyle="SingleBorderWindow" Foreground="White">
 
     <Window.Resources>
         <Storyboard x:Key="OpenMenu">
@@ -31,24 +31,15 @@
         </EventTrigger>
     </Window.Triggers>
     <Grid Background="White">
-        <Grid x:Name="GridMain" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="540" Width="1010"/>
+        <Grid x:Name="GridMain" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="507" Width="818"/>
         <Grid Height="60" VerticalAlignment="Top" Background="#356859">
             <Grid.Effect>
                 <DropShadowEffect BlurRadius="1" ShadowDepth="1" Color="#FFACACAC"/>
             </Grid.Effect>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-                <TextBlock Text="Abel Dutra" VerticalAlignment="Center" FontSize="16"/>
-                <materialDesign:PopupBox PlacementMode="BottomAndAlignRightEdges" StaysOpen="False" Margin="10">
-                    <StackPanel Width="150">
-                        <Button Content="Settings"/>
-                        <Button Content="Account"/>
-                        <Button Content="Help"/>
-                        <Separator/>
-                        <Button Content="Logout"/>
-                    </StackPanel>
-                </materialDesign:PopupBox>
+                
             </StackPanel>
-            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22">Detecting Rocket Hits</TextBlock>
+            <TextBlock Name="mainTitle" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22">Detecting Rocket Hits</TextBlock>
         </Grid>
 
         <Grid x:Name="GridMenu" Width="70" HorizontalAlignment="Left" Background="#37966F">
