@@ -27,9 +27,9 @@ namespace MvvmWpfApp.ViewModels
             }
         }
 
-        private Result _selectedResult;
+        private Prediction _selectedResult;
 
-        public Result SelectedResult
+        public Prediction SelectedResult
         {
             get { return _selectedResult; }
             set

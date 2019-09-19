@@ -25,6 +25,7 @@ using GoogleDirections;
 using GuigleAPI.Model;
 using System.Net.Http;
 using System.Net;
+using Newtonsoft.Json;
 
 //using GoogleDirections;
 
@@ -35,7 +36,7 @@ namespace MvvmWpfApp.Views
     /// </summary>
     public partial class UploadPhotoView : UserControl
     {
-        public const string strGooglePlaceAPILey = "AIzaSyB----------------------------------Muro";
+        public const string strGooglePlaceAPILey = "AIzaSyCM-F5Ppnoh9Yn4VMYqIPTua7uGeUP2Wyc";
         public const string strPlacesAutofillUrl = "https://maps.googleapis.com/maps/api/geocode/json?latlng=";
 
         public UploadPhotoView()
@@ -79,6 +80,7 @@ namespace MvvmWpfApp.Views
             try
             {
                 strResult = await client.DownloadStringTaskAsync(new Uri(strFullURL));
+                RootObject results = JsonConvert.DeserializeObject<RootObject>(strResult);
             }
             catch
             {

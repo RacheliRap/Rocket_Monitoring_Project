@@ -7,7 +7,7 @@ using Newtonsoft.Json;
 
 namespace MvvmWpfApp.Models
 {
-    public class GoogleGeoJsonResult
+    /*public class GoogleGeoJsonResult
     {
         [JsonProperty("address_components", NullValueHandling = NullValueHandling.Ignore)]
         public AddressComponents[] Acomponents { get; set; }
@@ -42,6 +42,6 @@ namespace MvvmWpfApp.Models
 
         [JsonProperty("lng", NullValueHandling = NullValueHandling.Ignore)]
         public string Long { get; set; }
-    }
+    }*/
 
 }

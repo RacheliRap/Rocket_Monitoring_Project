@@ -26,7 +26,7 @@ namespace MvvmWpfApp.Controls
     {
 
         public static readonly DependencyProperty SelectedLocationProperty = DependencyProperty.Register(
-            "SelectedLocation", typeof(Prediction), typeof(GeoLocationAutoComplete), new PropertyMetadata(default(Result)));
+            "SelectedLocation", typeof(Prediction), typeof(GeoLocationAutoComplete), new PropertyMetadata(default(Prediction)));
 
         public event SelectionChangedEventHandler SelectedChanged
         {

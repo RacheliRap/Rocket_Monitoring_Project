@@ -14,7 +14,7 @@
         <controls1:AutoCompleteBox
             materialDesign:HintAssist.Hint="Enter Address Here"           
             x:Name="CompleteBox"
-            ItemsSource="{Binding Path=LocatioList}"
+            ItemsSource="{Binding Path=LocationList}"
             TextChanged="AutoCompleteBox_OnTextChanged"
             SelectionChanged="CompleteBox_OnSelectionChanged"
             SelectedItem="{Binding Path=SelectedResult, Mode=TwoWay}"
