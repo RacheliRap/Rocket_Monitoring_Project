@@ -16,7 +16,7 @@ namespace MvvmWpfApp.Models
         public double Latitude { get; set; }
         public double Longitude { get; set; }
 
-        public const string strGooglePlaceAPILey = "AIzaSy-------------------------------8AAe1Y";
+        public const string strGooglePlaceAPILey = "AIzaSyD8sGp7pRY43P2yVcHN5D1YMWYjoZkQK0Q";
         public const string strPlacesAutofillUrl = "https://maps.googleapis.com/maps/api/place/autocomplete/json";
 
         static async Task<string> CallService(string strURL)

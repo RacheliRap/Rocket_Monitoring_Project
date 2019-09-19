@@ -14,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using QuickType;
+using MvvmWpfApp.Models;
 using Toolkit.WPF.Controls.ConsoleControl;
 
 namespace MvvmWpfApp.Controls
@@ -25,7 +26,7 @@ namespace MvvmWpfApp.Controls
     {
 
         public static readonly DependencyProperty SelectedLocationProperty = DependencyProperty.Register(
-            "SelectedLocation", typeof(Result), typeof(GeoLocationAutoComplete), new PropertyMetadata(default(Result)));
+            "SelectedLocation", typeof(Prediction), typeof(GeoLocationAutoComplete), new PropertyMetadata(default(Result)));
 
         public event SelectionChangedEventHandler SelectedChanged
         {
@@ -33,9 +34,9 @@ namespace MvvmWpfApp.Controls
             remove { CompleteBox.SelectionChanged += value; }
         }
 
-        public Result SelectedLocation
+        public Prediction SelectedLocation
         {
-            get { return (Result)GetValue(SelectedLocationProperty); }
+            get { return (Prediction)GetValue(SelectedLocationProperty); }
             set { SetValue(SelectedLocationProperty, value); }
         }
  
@@ -61,7 +62,7 @@ namespace MvvmWpfApp.Controls
 
         private void CompleteBox_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            SelectedLocation = (Result)(sender as AutoCompleteBox)?.SelectedItem;
+            SelectedLocation = (Prediction)(sender as AutoCompleteBox)?.SelectedItem;
         }
     }
 }
