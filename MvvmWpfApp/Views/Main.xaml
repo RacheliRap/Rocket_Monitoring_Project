@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:MvvmWpfApp.Views"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-        Title="main" Height="600" Width="900" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen" WindowStyle="SingleBorderWindow" Foreground="White">
+        Title="Detecting Rocket Hits" Height="600" Width="900" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen" WindowStyle="SingleBorderWindow" Foreground="White">
 
     <Window.Resources>
         <Storyboard x:Key="OpenMenu">
@@ -31,7 +31,7 @@
         </EventTrigger>
     </Window.Triggers>
     <Grid Background="White">
-        <Grid x:Name="GridMain" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="540" Width="830"/>
+        <Grid x:Name="GridMain" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="507" Width="818"/>
         <Grid Height="60" VerticalAlignment="Top" Background="#356859">
             <Grid.Effect>
                 <DropShadowEffect BlurRadius="1" ShadowDepth="1" Color="#FFACACAC"/>
@@ -39,7 +39,7 @@
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
                 
             </StackPanel>
-            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22">Detecting Rocket Hits</TextBlock>
+            <TextBlock Name="mainTitle" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22">Detecting Rocket Hits</TextBlock>
         </Grid>
 
         <Grid x:Name="GridMenu" Width="70" HorizontalAlignment="Left" Background="#37966F">

@@ -39,28 +39,33 @@ namespace MvvmWpfApp.Views
         {
             UserControl usc = null;
             GridMain.Children.Clear();
-
+            mainTitle.Text = "Detecting Rocket Hits";
             switch (((ListViewItem)((ListView)sender).SelectedItem).Name)
             {
                 case "ItemHome":
                     usc = new MapView();
                     GridMain.Children.Add(usc);
+                    mainTitle.Text = "View Map and Hits";
                     break;
                 case "ItemReport":
                     usc = new NewReportFormView();
                     GridMain.Children.Add(usc);
+                    mainTitle.Text = "Add New Report";
                     break;
                 case "ItemAnalysis":
                     usc = new ChartView();
                     GridMain.Children.Add(usc);
+                    mainTitle.Text = "Analysis";
                     break;
                 case "ItemEvaluate":
                     usc = new EvaluateView();
                     GridMain.Children.Add(usc);
+                    mainTitle.Text = "Evaluate k-Means Performance";
                     break;
                 case "ItemUpdate":
                     usc = new UploadPhotoView();
                     GridMain.Children.Add(usc);
+                    mainTitle.Text = "Upload Photo for Real Location";
                     break;
                 default:
                     break;

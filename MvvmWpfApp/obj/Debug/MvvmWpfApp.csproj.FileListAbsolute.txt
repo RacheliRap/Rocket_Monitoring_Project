@@ -207,3 +207,8 @@ C:\Users\Racheli\Documents\windows-system-project-mvvm-master\MvvmWpfApp\obj\Deb
 C:\Users\Racheli\Documents\windows-system-project-mvvm-master\MvvmWpfApp\obj\Debug\Red Alert.g.resources
 C:\Users\Racheli\Documents\windows-system-project-mvvm-master\MvvmWpfApp\obj\Debug\Red Alert.exe
 C:\Users\Racheli\Documents\windows-system-project-mvvm-master\MvvmWpfApp\obj\Debug\Red Alert.pdb
+C:\Users\shirliya1\Rocket_Monitoring_Project\MvvmWpfApp\bin\Debug\Directions.Core.dll
+C:\Users\shirliya1\Rocket_Monitoring_Project\MvvmWpfApp\bin\Debug\Directions.Google.dll
+C:\Users\shirliya1\Rocket_Monitoring_Project\MvvmWpfApp\bin\Debug\Directions.Google.Utility.dll
+C:\Users\shirliya1\Rocket_Monitoring_Project\MvvmWpfApp\bin\Debug\GuigleAPI.dll
+C:\Users\shirliya1\Rocket_Monitoring_Project\MvvmWpfApp\bin\Debug\System.Drawing.Common.dll
