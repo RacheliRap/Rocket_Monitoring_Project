@@ -125,6 +125,7 @@ namespace MvvmWpfApp.Views
             try
             {
                 strResult = await client.DownloadStringTaskAsync(new Uri(strFullURL));
+
                 RootObject results = JsonConvert.DeserializeObject<RootObject>(strResult);
                 (DataContext as NewReportFormVM).Report.Latitude = results.results[0].geometry.location.lat;
                 (DataContext as NewReportFormVM).Report.Longitude = results.results[0].geometry.location.lng;

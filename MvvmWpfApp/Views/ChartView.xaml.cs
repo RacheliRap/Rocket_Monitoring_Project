@@ -41,7 +41,7 @@ namespace MvvmWpfApp.Views
                 {
                     Title = "Report",
                     Fill = brush,
-                    Values = new ChartValues<double> { 11, 56, 42, 12, 56, 22, 18, 34, 36, 12, 19,1 }
+                    Values = new ChartValues<double> { 3, 10, 7, 6, 5, 10, 5, 2, 2, 0, 0, 0 }
                 }
             };
 
@@ -50,11 +50,11 @@ namespace MvvmWpfApp.Views
             {   //real hits
                 Title = "Events",
                 Fill = brush1,
-                Values = new ChartValues<double> { 10, 50, 39, 10, 32, 26, 30, 20, 21, 34, 1, 15 }
+                Values = new ChartValues<double> { 2, 5, 1, 6, 3, 8, 5, 2, 1, 0, 0, 0 }
             });
 
             //also adding values updates and animates the chart automatically
-            SeriesCollection[1].Values.Add(48d);
+            //SeriesCollection[1].Values.Add(48d);
 
             Labels = new[] { "Jan", "Feb", "March", "Apr" ,"May",
                 "Jun", "July","Aug", "Sep", "Oct", "Nov", "Dec"};

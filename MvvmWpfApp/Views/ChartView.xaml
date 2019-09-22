@@ -9,7 +9,7 @@
              d:DesignHeight="507" d:DesignWidth="818"
              d:DataContext="{d:DesignInstance local:ChartView}">
     <Grid>
-        
+        <TextBlock x:Name="explanation" Foreground="Black" Text="Number of Reports(Orange) and Events(Green) per month 2019" Margin="185,20,185,449.667" FontWeight="Bold" FontSize="15"/>
 
         <!-- <lvc:PieChart.Series>
                 <lvc:PieSeries Title="Maria" Values="6" DataLabels="True"
@@ -17,7 +17,7 @@
                 <lvc:PieSeries Title="Charles" Values="5" DataLabels="True" 
                                LabelPoint="{Binding PointLabel}"/>
             </lvc:PieChart.Series>-->
-        <lvc:CartesianChart Series="{Binding SeriesCollection}" LegendLocation="Left" Margin="50" Foreground="Black">
+        <lvc:CartesianChart Series="{Binding SeriesCollection}" LegendLocation="Left" Margin="50,75,50,50" Foreground="Black">
             <lvc:CartesianChart.AxisX>
                 <lvc:Axis Title="Monthes" Labels="{Binding Labels}">
                     <lvc:Axis.Separator>
