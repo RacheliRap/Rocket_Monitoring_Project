@@ -12,13 +12,16 @@
             <RowDefinition Height="100*"/>
             <RowDefinition Height="20*"/>
         </Grid.RowDefinitions>
-        <TextBox  x:Name="explanation" IsEnabled="False" Text="Evaluation of Kmeans for predicting place of fallen missiles" VerticalAlignment="Top" Foreground="Black" Margin="0,20,0,0" HorizontalAlignment="Center" TextChanged="TextBox_TextChanged" />
+        <TextBox  x:Name="explanation" IsEnabled="False" Text="Evaluation of k-Means for predicting place of fallen missiles" VerticalAlignment="Top" Foreground="Black" Margin="0,20,0,0" HorizontalAlignment="Center" TextChanged="TextBox_TextChanged" />
         <lvc:PieChart x:Name="myPieChart" LegendLocation="Bottom" DataClick="Chart_OnDataClick" Hoverable="False" DataTooltip="{x:Null}" Margin="20,60,20,10" Foreground="black"/>
-        <Slider x:Name="slider" Maximum="1000" ValueChanged="Slider_ValueChanged" Margin="50,30,50,30" Grid.Row="1" Ticks="0,100,200,300,400,500,600,700,800,900,1000" IsSnapToTickEnabled="True" TickPlacement="BottomRight" >
-        <Slider.Resources>
-            <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" Color="Black" />
-            <SolidColorBrush x:Key="{x:Static SystemColors.ControlDarkDarkBrushKey}" Color="Silver" />
-        </Slider.Resources>
-            </Slider>
+        <Slider x:Name="slider" Maximum="1000" ValueChanged="Slider_ValueChanged" Margin="50,10,50,43" Grid.Row="1" Ticks="0,100,200,300,400,500,600,700,800,900,1000" IsSnapToTickEnabled="True" TickPlacement="BottomRight" >
+            <Slider.Resources>
+                <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" Color="Black" />
+                <SolidColorBrush x:Key="{x:Static SystemColors.ControlDarkDarkBrushKey}" Color="Silver" />
+            </Slider.Resources>
+        </Slider>
+        <TextBlock x:Name="numbersForTics" Text=" 0                 100                200               300                400                500               600               700                 800                900            1000"
+                    Foreground="Silver" Margin="50,40,43,19" Grid.Row="1" TextWrapping="Wrap" />
+
     </Grid>
 </UserControl>

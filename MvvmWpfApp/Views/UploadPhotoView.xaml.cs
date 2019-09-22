@@ -18,12 +18,6 @@ using System.Drawing;
 using MvvmWpfApp.Models;
 using MetadataExtractor;
 using MetadataExtractor.Formats.Exif;
-using System.Drawing.Imaging;
-using GuigleAPI;
-using System.Xml;
-using GoogleDirections;
-using GuigleAPI.Model;
-using System.Net.Http;
 using System.Net;
 using Newtonsoft.Json;
 
@@ -194,7 +188,6 @@ namespace MvvmWpfApp.Views
                 uint degreesNumerator = BitConverter.ToUInt32(propItem.Value, 0);
                 uint degreesDenominator = BitConverter.ToUInt32(propItem.Value, 4);
                 double degrees = degreesNumerator / (double)degreesDenominator;
-
 
                 uint minutesNumerator = BitConverter.ToUInt32(propItem.Value, 8);
                 uint minutesDenominator = BitConverter.ToUInt32(propItem.Value, 12);

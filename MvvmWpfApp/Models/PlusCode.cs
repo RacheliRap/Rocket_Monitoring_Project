@@ -91,4 +91,5 @@ namespace MvvmWpfApp.Models
         public List<Result> results { get; set; }
         public string status { get; set; }
     }
+
 }

@@ -45,7 +45,7 @@ namespace MvvmWpfApp.ViewModels
             var autocomplete = new GeoLocationAutoCompleteModel();
             var results = await autocomplete.SearchLocation(addres);
             if (addres != autoComplete.Text) return;
-            LocationList = results;
+           LocationList = results;
             autoComplete.DataContext = this;
         }
 

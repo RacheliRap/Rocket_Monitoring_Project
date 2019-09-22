@@ -13,6 +13,7 @@ using MvvmWpfApp.Models;
 using MvvmWpfApp.Utils;
 using QuickType;
 
+
 namespace MvvmWpfApp.ViewModels
 {
     public class NewReportFormVM : INotifyPropertyChanged

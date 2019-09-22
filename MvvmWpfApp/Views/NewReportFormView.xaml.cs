@@ -19,6 +19,9 @@ using BE;
 using MvvmWpfApp.Controls;
 using MvvmWpfApp.ViewModels;
 using QuickType;
+using MvvmWpfApp.Models;
+using System.Net;
+using Newtonsoft.Json;
 
 namespace MvvmWpfApp.Views
 {
@@ -90,10 +93,12 @@ namespace MvvmWpfApp.Views
         private void AddressTextBox_OnSelectedChanged(object sender, SelectionChangedEventArgs e)
         {
             if (!(sender is AutoCompleteBox) || e.AddedItems.Count == 0) return;
-            (DataContext as NewReportFormVM).Report.Address = ((Result) e.AddedItems[0]).Title;
-            (DataContext as NewReportFormVM).Report.Latitude = ((Result) e.AddedItems[0])?.Position?[0]??0;
-            (DataContext as NewReportFormVM).Report.Longitude = ((Result) e.AddedItems[0])?.Position?[1]??0;
+            (DataContext as NewReportFormVM).Report.Address = ((Prediction) e.AddedItems[0]).description;
+            getCoordFromAddress((DataContext as NewReportFormVM).Report.Address);
+            //(DataContext as NewReportFormVM).Report.Latitude = ((Result) e.AddedItems[0])?.Position?[0]??0;
+            //(DataContext as NewReportFormVM).Report.Longitude = ((Result) e.AddedItems[0])?.Position?[1]??0;
         }
+
 
         private void ActionButton_Loaded(object sender, RoutedEventArgs e)
         {
@@ -103,6 +108,38 @@ namespace MvvmWpfApp.Views
         private void ActionButton_Loaded_1(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private async void getCoordFromAddress(string address)
+        {
+             string strGooglePlaceAPILey = "AIzaSyAD9hZLLf8l_i48FI07LaS74WLOqkuK4C4";
+             string strPlacesAutofillUrl = "https://maps.googleapis.com/maps/api/geocode/json?address=";
+
+            string strResult, strFullURL;
+            WebClient client = new WebClient();
+            StringBuilder builderLocationAutoComplete = new StringBuilder(strPlacesAutofillUrl);
+            builderLocationAutoComplete.Append(address).Append("&key=").Append(strGooglePlaceAPILey);
+            strFullURL = builderLocationAutoComplete.ToString();
+            builderLocationAutoComplete.Clear();
+            builderLocationAutoComplete = null;
+            try
+            {
+                strResult = await client.DownloadStringTaskAsync(new Uri(strFullURL));
+                RootObject results = JsonConvert.DeserializeObject<RootObject>(strResult);
+                (DataContext as NewReportFormVM).Report.Latitude = results.results[0].geometry.location.lat;
+                (DataContext as NewReportFormVM).Report.Longitude = results.results[0].geometry.location.lng;
+
+            }
+            catch
+            {
+                strResult = "Exception";
+                address = null;
+            }
+            finally
+            {
+                client.Dispose();
+                client = null;
+            }
         }
     }
 }
