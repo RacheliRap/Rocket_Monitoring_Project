@@ -41,7 +41,7 @@ namespace MvvmWpfApp.Views
                 {
                     Title = "Report",
                     Fill = brush,
-                    Values = new ChartValues<double> { 11, 56, 42, 12, 56, 22, 18, 34, 36, 12, 19 }
+                    Values = new ChartValues<double> { 11, 56, 42, 12, 56, 22, 18, 34, 36, 12, 19,1 }
                 }
             };
 

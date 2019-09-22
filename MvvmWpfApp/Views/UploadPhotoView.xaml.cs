@@ -30,7 +30,7 @@ namespace MvvmWpfApp.Views
     /// </summary>
     public partial class UploadPhotoView : UserControl
     {
-        public const string strGooglePlaceAPILey = "AIzaSyCM-F5Ppnoh9Yn4VMYqIPTua7uGeUP2Wyc";
+        public const string strGooglePlaceAPILey = "AIzaSyAD9hZLLf8l_i48FI07LaS74WLOqkuK4C4";
         public const string strPlacesAutofillUrl = "https://maps.googleapis.com/maps/api/geocode/json?latlng=";
         GeoLocation location;
         string address;
@@ -111,10 +111,6 @@ namespace MvvmWpfApp.Views
             {
                 if(address == null) // The photo had coordinates, but couldnt convert them to address
                 {
-                    /*var lat = location.Latitude;
-                    var lon = location.Longitude;
-                    Hyperlink hyperl = new Hyperlink(new Run("hi"));
-                    hyperl.NavigateUri = new Uri("http://search.msn.com");*/
                     StringBuilder showString = new StringBuilder("Are you sure you want to add a new falling event at:\n ");
                     showString.Append("https://www.google.com/maps/place/{lat},{lon}");
                     MessageBox.Show(showString.ToString(), "Add Event", MessageBoxButton.OK);
@@ -122,8 +118,22 @@ namespace MvvmWpfApp.Views
                 else // The photo contained coordinates, and address was extracted
                 {
                     StringBuilder showString = new StringBuilder("Are you sure you want to add a new falling event at ");
-                    showString.Append(address);
-                    MessageBox.Show(showString.ToString(), "Add Event", MessageBoxButton.OK);
+                    showString.Append("\n").Append(address).Append("?");
+                    var result = MessageBox.Show(showString.ToString(), "Add Event",  MessageBoxButton.YesNo);
+                    if (result == MessageBoxResult.Yes)
+                    {
+                        showString = new StringBuilder("A new falling event at was added at:");
+                        showString.Append("\n").Append(address);
+                        MessageBox.Show(showString.ToString(), "Added Event", MessageBoxButton.OK);
+                        saveReport.IsEnabled = false;
+
+
+                    }
+                    else if (result == MessageBoxResult.No)
+                    {
+                        
+                    }
+
                 }
             }
         

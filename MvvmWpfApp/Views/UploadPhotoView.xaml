@@ -8,9 +8,9 @@
              d:DesignHeight="507" d:DesignWidth="818">
     <Grid>
 
-        <Button Name="btnLoad" Height="41" Margin="600,70,0,395" 
+        <Button Name="btnLoad" Height="41" Margin="614,70,122,395.667" 
         Width="82" Click="btnLoad_Click"  Background="#FD5523">_Browse</Button>
-        <TextBox x:Name="UriTextBox" Visibility="Visible" Margin="200,68,200,395" />
+        <TextBox x:Name="UriTextBox" Visibility="Visible" Margin="154,68,246,394.667" />
         <Image Margin="200,180,200,145" Name="imgPhoto" />
         <Button x:Name="saveReport" Background="#FD5523" IsEnabled="False" Margin="300,400,300,69" Visibility="Visible" Click="saveReport_Click">_Upload Phohto as New Event</Button>
     </Grid>
