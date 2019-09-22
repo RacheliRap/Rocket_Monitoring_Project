@@ -61,8 +61,8 @@ namespace MvvmWpfApp.Views
         private void Slider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
 
-            myPieChart.Series[0].Values[0] = 40 - slider.Value / 100;
-            myPieChart.Series[1].Values[0] = 60 + slider.Value / 100;
+            myPieChart.Series[0].Values[0] = 40 - slider.Value / 50;
+            myPieChart.Series[1].Values[0] = 60 + slider.Value / 50;
         }
 
     }
